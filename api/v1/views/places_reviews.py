@@ -60,4 +60,4 @@ def get_delete_update_review(review_id):
             if key not in ignore:
                 setattr(review, key, value)
         storage.save()
-        return jsonify(review.to_dict()), 2
+        return jsonify(review.to_dict()), 201

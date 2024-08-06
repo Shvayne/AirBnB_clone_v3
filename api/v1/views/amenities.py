@@ -6,7 +6,7 @@ from models import storage
 from models.amenity import Amenity
 
 @app_views.route("/amenities", methods=['GET', 'POST'], strict_slashes=False)
-@app_views.route("/amenities/<amenity_id>", method=['GET', 'DELETE', 'PUT'], strict_slashes=False)
+@app_views.route("/amenities/<amenity_id>", methods=['GET', 'DELETE', 'PUT'], strict_slashes=False)
 def get_amenities(amenity_id=None):
     """
     Returns a list of amenity objects or if a PUT rqt is

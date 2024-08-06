@@ -28,7 +28,7 @@ def delete_state(state_id):
     storage.save()
     return jsonify({}), 200
 
-@app_views.route("/api/v1/states", method=['POST'], strict_slashes=False)
+@app_views.route("/api/v1/states", methods=['POST'], strict_slashes=False)
 @app_views.route("/states/<state_id>", methods=['PUT'], strict_slashes=False)
 def edit_state(state_id=None):
     """makes changes to a state object or creates a new State object if no id is provided"""
